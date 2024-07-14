@@ -1,29 +1,28 @@
-import React, { useState } from "react";
-import { Button, Modal } from "antd";
+import React from "react";
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(false);
+  // const [loading, setLoading] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const showModal = () => {
-    setOpen(true);
-  };
+  // const showModal = () => {
+  //   setOpen(true);
+  // };
 
-  const handleOk = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setOpen(false);
-    }, 3000);
-  };
+  // const handleOk = () => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //     setOpen(false);
+  //   }, 3000);
+  // };
 
-  const handleCancel = () => {
-    setOpen(false);
-  };
+  // const handleCancel = () => {
+  //   setOpen(false);
+  // };
 
   return (
     <>
-      App
+      App 1
       {/* <Button type="primary" onClick={showModal}>
         Open Modal with customized footer
       </Button>
