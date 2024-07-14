@@ -22,7 +22,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      App 1
+      App 2
       {/* <Button type="primary" onClick={showModal}>
         Open Modal with customized footer
       </Button>
