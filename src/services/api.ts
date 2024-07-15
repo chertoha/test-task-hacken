@@ -1,15 +1,16 @@
 import axios from "axios";
+
 import type { AxiosRequestConfig, AxiosError } from "axios";
 import type { BaseQueryFn } from "@reduxjs/toolkit/query";
 
 const BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
-const api = axios.create({
-  baseURL: BASE_URL,
-});
-
 const axiosBaseQuery =
-  (): BaseQueryFn<
+  ({
+    baseUrl,
+  }: {
+    baseUrl: string;
+  }): BaseQueryFn<
     {
       url: string;
       method: AxiosRequestConfig["method"];
@@ -22,8 +23,8 @@ const axiosBaseQuery =
   > =>
   async ({ url, method, data, params, headers }) => {
     try {
-      const result = await api({
-        url,
+      const result = await axios({
+        url: baseUrl + url,
         method,
         data,
         params,
@@ -42,4 +43,4 @@ const axiosBaseQuery =
     }
   };
 
-export { BASE_URL, api, axiosBaseQuery };
+export { BASE_URL, axiosBaseQuery };
