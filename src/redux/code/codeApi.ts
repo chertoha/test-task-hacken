@@ -7,7 +7,7 @@ const codeApi = createApi({
   baseQuery: axiosBaseQuery({ baseUrl: "" }),
 
   endpoints: (builder) => ({
-    getCode: builder.query<any, void>({
+    getCode: builder.query<string, void>({
       query: () => ({
         url: "/public/App.tsx",
         method: "GET",

@@ -28,7 +28,7 @@ import { useGetCodeQuery } from "./redux/code/codeApi";
 
 const Coin: FC<{ name: string; image: string }> = ({ name, image }) => (
   <Flex gap="middle" align="center">
-    <Image width={32} src={image} alt={name} loading="lazy" />
+    <Image width={32} height={32} src={image} alt={name} loading="lazy" />
     {name}
   </Flex>
 );
