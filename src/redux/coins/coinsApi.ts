@@ -1,5 +1,5 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
-import { axiosBaseQuery } from "@/services/api";
+import { BASE_URL, axiosBaseQuery } from "@/services/api";
 import { CoinsWithMarket, Currency, MarketOrder } from "@/types/entities";
 
 type CoinsQueryParams = {
@@ -13,7 +13,7 @@ type CoinsQueryParams = {
 const coinsApi = createApi({
   reducerPath: "coins",
 
-  baseQuery: axiosBaseQuery(),
+  baseQuery: axiosBaseQuery({ baseUrl: BASE_URL }),
 
   endpoints: (builder) => ({
     getCoins: builder.query<CoinsWithMarket[], CoinsQueryParams>({
