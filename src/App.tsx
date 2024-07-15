@@ -1,5 +1,7 @@
 import React from "react";
 
+const BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
+
 const App: React.FC = () => {
   // const [loading, setLoading] = useState(false);
   // const [open, setOpen] = useState(false);
@@ -7,7 +9,7 @@ const App: React.FC = () => {
   // const showModal = () => {
   //   setOpen(true);
   // };
-
+  console.log(BASE_URL);
   // const handleOk = () => {
   //   setLoading(true);
   //   setTimeout(() => {
@@ -22,7 +24,8 @@ const App: React.FC = () => {
 
   return (
     <>
-      App 2
+      {BASE_URL}
+      {/* App 2 */}
       {/* <Button type="primary" onClick={showModal}>
         Open Modal with customized footer
       </Button>
